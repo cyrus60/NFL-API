@@ -1,11 +1,9 @@
-import flask 
-from flask import request, jsonify
+from flask import request, jsonify, Flask
 
-app = flask.Flask(__name__)
-app.config["DEBUG"] = True
+app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
+@app.route('/')
 def home():
-    return '''<h1> hello </h1> '''
+    return "Hello world"
 
 app.run()
